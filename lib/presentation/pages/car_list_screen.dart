@@ -4,10 +4,24 @@ import 'package:flutter_car_rental_app_clean_architecture/presentation/widgets/c
 
 class CarListScreen extends StatelessWidget {
   final List<Car> cars = [
-    Car(model: 'Fotuner GR', distance: 870.0, fuelCapacity: 50, pricePerHour: 45),
-    Car(model: 'Fotuner GR', distance: 870.0, fuelCapacity: 50, pricePerHour: 45),
-    Car(model: 'Fotuner GR', distance: 870.0, fuelCapacity: 50, pricePerHour: 45),
-
+    Car(
+      model: 'Fotuner GR',
+      distance: 870.0,
+      fuelCapacity: 50,
+      pricePerHour: 45,
+    ),
+    Car(
+      model: 'Fotuner GR',
+      distance: 870.0,
+      fuelCapacity: 50,
+      pricePerHour: 45,
+    ),
+    Car(
+      model: 'Fotuner GR',
+      distance: 870.0,
+      fuelCapacity: 50,
+      pricePerHour: 45,
+    ),
   ];
 
   @override
