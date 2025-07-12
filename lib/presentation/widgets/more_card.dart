@@ -14,12 +14,8 @@ class MoreCard extends StatelessWidget {
         color: Color(0xff212020),
         borderRadius: BorderRadius.circular(18),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black54,
-            blurRadius: 8,
-            offset: Offset(0, 4),
-          ),
-        ]
+          BoxShadow(color: Colors.black54, blurRadius: 8, offset: Offset(0, 4)),
+        ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,9 +25,11 @@ class MoreCard extends StatelessWidget {
             children: [
               Text(
                 car.model,
-                style: TextStyle(fontWeight: FontWeight.bold, 
-                fontSize: 16,
-                color: Colors.white),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(height: 5),
               Row(
@@ -44,17 +42,16 @@ class MoreCard extends StatelessWidget {
                   ),
                   SizedBox(width: 10),
                   Icon(Icons.battery_full, color: Colors.white, size: 16),
-                        SizedBox(width: 5),
+                  SizedBox(width: 5),
                   Text(
                     car.fuelCapacity.toString(),
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ],
-              )
+              ),
             ],
           ),
           Icon(Icons.arrow_forward, size: 30, color: Colors.grey),
-          
         ],
       ),
     );

@@ -91,28 +91,28 @@ class CarDetailsPage extends StatelessWidget {
               children: [
                 MoreCard(
                   car: Car(
-                    model: car.model+"-1",
-                    distance: car.distance+100,
-                    fuelCapacity: car.fuelCapacity+100,
-                    pricePerHour: car.pricePerHour+10,
+                    model: car.model + "-1",
+                    distance: car.distance + 100,
+                    fuelCapacity: car.fuelCapacity + 100,
+                    pricePerHour: car.pricePerHour + 10,
                   ),
                 ),
                 SizedBox(height: 5),
                 MoreCard(
                   car: Car(
-                    model: car.model+"-2",
-                    distance: car.distance+200,
-                    fuelCapacity: car.fuelCapacity+200,
-                    pricePerHour: car.pricePerHour+20,
+                    model: car.model + "-2",
+                    distance: car.distance + 200,
+                    fuelCapacity: car.fuelCapacity + 200,
+                    pricePerHour: car.pricePerHour + 20,
                   ),
                 ),
                 SizedBox(height: 5),
                 MoreCard(
                   car: Car(
-                    model: car.model+"-3",
-                    distance: car.distance+300,
-                    fuelCapacity: car.fuelCapacity+300,
-                    pricePerHour: car.pricePerHour+30,
+                    model: car.model + "-3",
+                    distance: car.distance + 300,
+                    fuelCapacity: car.fuelCapacity + 300,
+                    pricePerHour: car.pricePerHour + 30,
                   ),
                 ),
               ],

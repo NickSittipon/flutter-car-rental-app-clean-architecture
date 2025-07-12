@@ -13,9 +13,7 @@ class CarCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => CarDetailsPage(car: car,),
-          ),
+          MaterialPageRoute(builder: (context) => CarDetailsPage(car: car)),
         );
       },
       child: Container(
