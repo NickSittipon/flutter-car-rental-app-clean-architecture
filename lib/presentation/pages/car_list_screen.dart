@@ -3,6 +3,7 @@ import 'package:flutter_car_rental_app_clean_architecture/data/model/car.dart';
 import 'package:flutter_car_rental_app_clean_architecture/presentation/widgets/car_card.dart';
 
 class CarListScreen extends StatelessWidget {
+  
   final List<Car> cars = [
     Car(
       model: 'Fotuner GR',
