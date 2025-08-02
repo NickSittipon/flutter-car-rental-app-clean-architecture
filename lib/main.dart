@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_car_rental_app_clean_architecture/presentation/pages/map_datails_page.dart';
 import 'package:flutter_car_rental_app_clean_architecture/presentation/pages/onboarding_page.dart';
 import 'firebase_options.dart';
 
