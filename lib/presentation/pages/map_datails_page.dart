@@ -7,7 +7,6 @@ class MapDetailsPage extends StatelessWidget {
   final Car car;
 
   const MapDetailsPage({super.key, required this.car});
-  
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,7 @@ class MapDetailsPage extends StatelessWidget {
             children: [
               TileLayer(
                 urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                userAgentPackageName: 'com.example.myapp', // เปลี่ยนให้ตรงกับชื่อแพ็กเกจ
+                userAgentPackageName: 'com.example.myapp',
               ),
             ],
           ),
@@ -38,8 +37,8 @@ class MapDetailsPage extends StatelessWidget {
             bottom: 0,
             left: 0,
             right: 0,
-            child: carDetailsCard(car: car)
-          )
+            child: carDetailsCard(car: car),
+          ),
         ],
       ),
     );
@@ -61,32 +60,39 @@ Widget carDetailsCard({required Car car}) {
               topRight: Radius.circular(30),
             ),
             boxShadow: [
-              BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10)
-            ]
+              BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10),
+            ],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 20,),
-              Text('${car.model}', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
-              SizedBox(height: 10,),
+              SizedBox(height: 20),
+              Text(
+                '${car.model}',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 10),
               Row(
                 children: [
-                  Icon(Icons.directions_car, color: Colors.white, size: 16,),
-                  SizedBox(width: 5,),
+                  Icon(Icons.directions_car, color: Colors.white, size: 16),
+                  SizedBox(width: 5),
                   Text(
                     '> ${car.distance} km',
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
-                  SizedBox(width: 10,),
-                  Icon(Icons.battery_full, color: Colors.white, size: 14,),
-                  SizedBox(width: 5,),
+                  SizedBox(width: 10),
+                  Icon(Icons.battery_full, color: Colors.white, size: 14),
+                  SizedBox(width: 5),
                   Text(
                     '${car.fuelCapacity.toString()}',
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
@@ -102,25 +108,39 @@ Widget carDetailsCard({required Car car}) {
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(20),
                 topLeft: Radius.circular(20),
-              )
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Features", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                Text(
+                  "Features",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
                 featureIcons(),
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('\$${car.pricePerHour}/day', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
+                    Text(
+                      '\$${car.pricePerHour}/day',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     ElevatedButton(
-                        onPressed: (){},
-                        style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                        child: Text('Book Now', style: TextStyle(color: Colors.white),)
-                    )
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                      ),
+                      child: Text(
+                        'Book Now',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
@@ -129,8 +149,8 @@ Widget carDetailsCard({required Car car}) {
         Positioned(
           top: 50,
           right: 20,
-          child: Image.asset('assets/white_car.png')
-        )
+          child: Image.asset('assets/white_car.png'),
+        ),
       ],
     ),
   );
@@ -147,23 +167,20 @@ Widget featureIcons() {
   );
 }
 
-Widget featureIcon(IconData icon, String title, String subtitle){
+Widget featureIcon(IconData icon, String title, String subtitle) {
   return Container(
     width: 100,
     height: 100,
     padding: EdgeInsets.all(5),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      border: Border.all(color: Colors.grey, width: 1)
+      border: Border.all(color: Colors.grey, width: 1),
     ),
     child: Column(
       children: [
-        Icon(icon, size: 28,),
+        Icon(icon, size: 28),
         Text(title),
-        Text(
-          subtitle,
-          style: TextStyle(color: Colors.grey, fontSize: 10),
-        )
+        Text(subtitle, style: TextStyle(color: Colors.grey, fontSize: 10)),
       ],
     ),
   );

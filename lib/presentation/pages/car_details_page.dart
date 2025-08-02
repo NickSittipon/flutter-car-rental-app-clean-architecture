@@ -13,7 +13,8 @@ class CarDetailsPage extends StatefulWidget {
   State<CarDetailsPage> createState() => _CarDetailsPageState();
 }
 
-class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProviderStateMixin {
+class _CarDetailsPageState extends State<CarDetailsPage>
+    with SingleTickerProviderStateMixin {
   AnimationController? _controller;
   Animation<double>? _animation;
 
@@ -21,12 +22,13 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
   void initState() {
     _controller = AnimationController(
       duration: const Duration(seconds: 3),
-      vsync: this
+      vsync: this,
     );
 
     _animation = Tween<double>(begin: 1.0, end: 1.5).animate(_controller!)
-    ..addListener(() { setState(() {
-    }); });
+      ..addListener(() {
+        setState(() {});
+      });
 
     _controller!.forward();
 
@@ -109,7 +111,7 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
                       height: 172,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        
+
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black12,

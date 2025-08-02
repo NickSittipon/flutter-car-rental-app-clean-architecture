@@ -9,10 +9,10 @@ class CarBloc extends Bloc<CarEvent, CarState> {
   CarBloc({required this.getCars}) : super(CarsLoading()) {
     on<LoadCars>((event, emit) async {
       emit(CarsLoading());
-      try{
+      try {
         final cars = await getCars.call();
         emit(CarsLoaded(cars));
-      }catch(e){
+      } catch (e) {
         emit(CarsError(e.toString()));
       }
     });

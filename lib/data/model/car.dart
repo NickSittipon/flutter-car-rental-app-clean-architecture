@@ -1,8 +1,8 @@
 class Car {
   final String model;
   final double distance;
-  final double fuelCapacity;
-  final double pricePerHour;
+  final int fuelCapacity;
+  final int pricePerHour;
 
   Car({
     required this.model,
@@ -13,10 +13,10 @@ class Car {
 
   factory Car.fromMap(Map<String, dynamic> map) {
     return Car(
-      model: map['model'],
-      distance: map['distance'],
-      fuelCapacity: map['fuelCapacity'],
-      pricePerHour: map['pricePerHour'],
+      model: map['model'] ?? '',
+      distance: (map['distance'] as num).toDouble(),
+      fuelCapacity: map['fuelCapacity'] ?? 0,
+      pricePerHour: map['pricePerHour'] ?? 0,
     );
   }
 }
